@@ -10,12 +10,11 @@ img = cv.resize(img, (20,20), cv.INTER_LINEAR)
 width = 700
 height = 700
 
-# havucun başlangıç konumu, ilerleyecek piksel sayısı ve çapı
+# havucun başlangıç konumu ve ilerleyecek piksel sayısı
 w1 = randint(20,680)
 h1 = randint(20,680)
 vx = randint(-10,10) 
 vy = randint(-10,10)
-radius = 10
 
 score = 0
 
@@ -35,7 +34,7 @@ def catcher(event, x, y, flags, param):
 
 # Havucun ekrana çizildikten sonra boş arkaplan üzerine belirtilen piksel kadar ileriye tekrar çizilmesini sağlayan fonksiyon
 def carrotMove():
-    global w1,h1,radius,width,height,vx,vy
+    global w1,h1,width,height,vx,vy
 
     # arka plan
     blank = np.zeros((width,height,3),dtype="uint8")
